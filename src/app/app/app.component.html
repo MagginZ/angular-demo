@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+    <h2>my favorite hero is : {{myHero}}</h2>
+    <p>Heroes:</p>
+    <ul>
+      <li *ngFor = "let hero of heroes">
+        {{hero.name}}
+        <button (click)="deleteHero(hero)">delete hero</button>
+      </li>
+      <p *ngIf="heroes.length > 2">There are many heroes!</p>
+    </ul>
+    <a routerLink="/size" routerLinkActive="active">跳转size示例</a> |
+    <a routerLink="/hook" routerLinkActive="active">跳转钩子函数示例</a>  |
+    <a routerLink="/child" routerLinkActive="active">跳转到父子组件示例</a> |
+    <a routerLink="/name-parent" routerLinkActive="active">跳转到setter示例</a> |
+    <a routerLink="/version-parent" routerLinkActive="active">跳转到Onchanges截听属性值变化</a> |
+    
+    <router-outlet></router-outlet>
